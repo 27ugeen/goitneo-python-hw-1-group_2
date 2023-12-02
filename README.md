@@ -10,7 +10,9 @@ $ python3 task_01.py
 ```
 
 ## Project "Birthdays"
-    The script defines a function get_birthdays_per_week(users) that takes a list of user dictionaries with names and birthdays. It prints the upcoming birthdays categorized by the days of the week.
+
+  The script defines a function get_birthdays_per_week(users) that takes a list of user dictionaries with names and birthdays.  
+  It prints the upcoming birthdays categorized by the days of the week.
 
 ### Example usage:
 ```bash
@@ -32,8 +34,9 @@ $ python task_02.py
 ```
 
 ## Project "Assistant Bot"
-    This is a console assistant bot capable of interacting with the user and executing various commands.
-    The bot responds to various commands, such as adding, changing, and displaying contacts, as well as saying hello and exiting.
+
+  This is a console assistant bot capable of interacting with the user and executing various commands.  
+  The bot responds to various commands, such as adding, changing, and displaying contacts, as well as saying hello and exiting.
 
 ### Bot Commands:
 
