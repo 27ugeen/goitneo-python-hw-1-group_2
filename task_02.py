@@ -1,7 +1,12 @@
-def parse_input(user_input):
+def parse_input(user_input, expected_args=None):
     cmd, *args = user_input.split()
     cmd = cmd.strip().lower()
+
+    if expected_args is not None and len(args) != expected_args:
+        raise ValueError(f"Expected {expected_args} arguments for command '{cmd}', but got {len(args)}.")
+
     return cmd, *args
+
 
 def hello():
     return "How can I help you?"
@@ -20,11 +25,15 @@ def change_contact(args, contacts):
         return "Contact not found."
 
 def show_phone(args, contacts):
-    name = args[0]
-    if name in contacts:
-        return contacts[name]
+    if args:
+        name = args[0]
+        if name in contacts:
+            return contacts[name]
+        else:
+            return "Contact not found."
     else:
-        return "Contact not found."
+        return "Invalid command. Please provide a name."
+
     
 def show_all(contacts):
     if contacts:
@@ -47,9 +56,15 @@ def main():
         elif command == "hello":
             print(hello())
         elif command == "add":
-            print(add_contact(args, contacts))
+            try:
+                print(add_contact(args, contacts))
+            except ValueError as e:
+                print(f"Error: {e}")
         elif command == "change":
-            print(change_contact(args, contacts))
+            try:
+                print(change_contact(args, contacts))
+            except ValueError as e:
+                print(f"Error: {e}")
         elif command == "phone":
             print(show_phone(args, contacts))
         elif command == "all":
