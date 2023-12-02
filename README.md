@@ -1,12 +1,15 @@
-## Project "Birthdays and Assistant Bot"
+# Project "Birthdays and Assistant Bot"
 
 This project consists of two Python scripts:
 
 1. **task_01.py**: Calculates upcoming birthdays for the current week and categorizes them by day.
 
    To run the script, use the following command:
+```bash
+$ python3 task_01.py
+```
 
-```$ python3 task_01.py```
+## Project "Birthdays"
     The script defines a function get_birthdays_per_week(users) that takes a list of user dictionaries with names and birthdays. It prints the upcoming birthdays categorized by the days of the week.
 
 ### Example usage:
@@ -24,12 +27,13 @@ get_birthdays_per_week(users)
 2. **task_02.py**: Implements a console assistant bot that responds to user commands.
 
     To run the script, use the following command:
-
-```$ python task_02.py```
-    The bot responds to various commands, such as adding, changing, and displaying contacts, as well as saying hello and exiting.
+```bash
+$ python task_02.py
+```
 
 ## Project "Assistant Bot"
     This is a console assistant bot capable of interacting with the user and executing various commands.
+    The bot responds to various commands, such as adding, changing, and displaying contacts, as well as saying hello and exiting.
 
 ### Bot Commands:
 
